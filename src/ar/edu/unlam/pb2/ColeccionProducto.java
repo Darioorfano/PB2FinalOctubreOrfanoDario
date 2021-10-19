@@ -1,5 +1,6 @@
 package ar.edu.unlam.pb2;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class ColeccionProducto {
@@ -7,7 +8,9 @@ public class ColeccionProducto {
 	private Set<Producto> productos;
 
 	/*CONSTRUCTORES*/
-	private ColeccionProducto(){}
+	public ColeccionProducto(){
+		this.productos=new HashSet<>();
+	}
 	
 	/*BUSCAR PRODUCTO*/
 	public Boolean buscaProducto(Producto producto) throws ProductoInexistenteException{

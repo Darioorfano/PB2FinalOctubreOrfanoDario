@@ -3,6 +3,8 @@ package ar.edu.unlam.pb2;
 import java.util.HashMap;
 import java.util.Map;
 
+import ar.edu.unlam.pb2.exceptions.ProductYaExisteException;
+import ar.edu.unlam.pb2.exceptions.ProductoInexistenteException;
 import ar.edu.unlam.pb2.exceptions.StockNegativoException;
 
 public class Stock {
@@ -10,17 +12,11 @@ public class Stock {
 	private Map<Producto, Integer> stock;
 	
 	/*CONSTRUCTORES*/
-	private Stock(){
+	public Stock(){
 	this.stock=new HashMap<Producto,Integer>();
 	}
 	
 	/*GETTERS Y SETTERS*/
-
-	/*BUSCA PRODUCTO EN EL STOCK*/
-	public Boolean buscaProductoEnStock(Producto producto)throws ProductoInexistenteException{
- 
-	}
-	
 	public Map<Producto, Integer> getStock() {
 		return stock;
 	}
@@ -28,22 +24,34 @@ public class Stock {
 	public void setStock(Map<Producto, Integer> stock) {
 		this.stock = stock;
 	}
+	
+	
+	/*BUSCA PRODUCTO EN EL STOCK*/
+	public Boolean buscaProductoEnStock(Producto producto)throws ProductoInexistenteException{
+		if(this.stock.containsKey(producto)) {
+			return true;
+		}else {
+			throw new ProductoInexistenteException();
+		}
+
+	}
+	
+	
 
 	
 	/*ALTA DE PRODUCTO EN EL STOCK*/
 	public Boolean agregarProducto(Producto producto)throws ProductYaExisteException{
-		if(this.stock.containsKey(producto){
-		    throw new ProductoYaExisteException();
-		return false;
+		if(this.stock.containsKey(producto)){
+		    throw new ProductYaExisteException();
 		}
 		this.stock.put(producto, 0);
 		return true;
-	
 	}
 	
 	/*BAJA DE PRODUCTO EN STOCK*/
 	public Boolean eliminarProducto(Producto producto){
-
+		
+	
 	}
 	
 	/*LISTADO DE STOCK*/

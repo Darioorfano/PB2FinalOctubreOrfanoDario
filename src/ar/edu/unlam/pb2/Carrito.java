@@ -1,4 +1,5 @@
 package ar.edu.unlam.pb2;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Carrito {
@@ -23,7 +24,7 @@ public class Carrito {
 	
 	/*MUESTRA CANTIDAD DEL PRODUCTO EN EL CARRITO*/
 	public Integer obtenerCantidadDeProductoEnCarrito(Producto producto){
-		
+	return this.carrito.get(producto);	
 	}
 
 	/*ELIMINAR DE PRODUCTO DEL CARRITO*/
