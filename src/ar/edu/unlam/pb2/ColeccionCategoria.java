@@ -19,6 +19,7 @@ public class ColeccionCategoria {
 	/*LISTAR CATEGORIAS*/
 	public List<Categoria> listaCategoria(){
 
+	return this.categorias;
 	}
 	
 	/*ELIMINAR CATEGORIA*/

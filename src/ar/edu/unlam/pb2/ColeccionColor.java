@@ -14,12 +14,13 @@ public class ColeccionColor {
 	
 	/*ALTA COLORES*/
 	public void altaColor(Color color){
-
+		this.colores.add(color);
 	}
 	
 	/*LISTAR COLORES*/
 	public List<Color> listaColor(){
 
+	return this.colores;
 	}
 	
 	/*ELIMINAR COLOR*/

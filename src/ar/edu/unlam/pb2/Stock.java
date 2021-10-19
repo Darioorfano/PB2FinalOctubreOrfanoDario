@@ -37,8 +37,6 @@ public class Stock {
 	}
 	
 	
-
-	
 	/*ALTA DE PRODUCTO EN EL STOCK*/
 	public Boolean agregarProducto(Producto producto)throws ProductYaExisteException{
 		if(this.stock.containsKey(producto)){
@@ -60,7 +58,7 @@ public class Stock {
 	
 	/*LISTADO DE STOCK*/
 	public Map<Producto, Integer> obtenerStock(){
-
+return this.stock;
 	}
 	
 	/*MUESTRA CANTIDAD DEL PRODUCTO*/

@@ -18,7 +18,7 @@ public class ColeccionTalle {
 	
 	/*ALTA TALLES*/
 	public void altaTalle(Talle talle){
-
+this.talles.add(talle);
 	}
 	
 	public List<Talle> getTalles() {
@@ -31,12 +31,12 @@ public class ColeccionTalle {
 
 	/*LISTAR TALLES*/
 	public List<Talle> listaTalle(){
-
+return this.talles;
 	}
 	
 	/*ELIMINAR COLOR*/
 	public List<Talle> bajaTalle(Talle talle){
-
+		
 	}
 
 	@Override
