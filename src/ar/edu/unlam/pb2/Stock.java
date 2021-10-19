@@ -50,8 +50,12 @@ public class Stock {
 	
 	/*BAJA DE PRODUCTO EN STOCK*/
 	public Boolean eliminarProducto(Producto producto){
-		
-	
+		if(this.stock.containsKey(producto)) {
+			this.stock.remove(producto);
+			return true;
+			
+		}
+	return false;
 	}
 	
 	/*LISTADO DE STOCK*/
